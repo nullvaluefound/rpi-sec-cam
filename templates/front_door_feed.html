@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pireus Home Controller</title>
+</head>
+<body>
+    <h1>Watching the front door!</h1>
+    <a href="{{url_for('index')}}">Home</a>
+    <br>
+    <br>
+    <p>{{ counter_update }}</p>
+    <iframe onload="this.width=screen.width;this.height=screen.height;" style='position: absolute; width: 100%; height:100%;' src="{{ video }}" frameborder="0">Video Feed</iframe>
+    <br>
+    <br>
+    <audio controls>
+        <source src="{{ url_for('audio') }}"type="audio/x-wav;codec=pcm">
+        Your browser does not support the audio element
+    </audio>
+</body>
+</html>
